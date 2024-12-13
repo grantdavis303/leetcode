@@ -6,13 +6,36 @@ require 'pry'
 # You may assume that each input would have exactly one solution, and you may not use the same element twice.
 # You can return the answer in any order.
 
+# def two_sum(nums, target)
+#   fn_index = 0
+#   nums.each do |fn|
+#     modified_nums = nums[fn_index + 1..nums.length]
+#     if modified_nums.length > 0
+#       sn_index = fn_index + 1
+#       modified_nums.each do |sn|
+#         if fn + sn == target
+#           return [fn_index, sn_index]
+#         else
+#           sn_index += 1
+#         end
+#       end
+#     end
+#     fn_index += 1
+#   end
+# end
+
 def two_sum(nums, target)
   fn_index = 0
+
   nums.each do |fn|
-    modified_nums = nums[fn_index + 1..nums.length]
-    if modified_nums.length > 0
+    mod_s = fn_index + 1
+    mod_e = nums.length
+    mod_nums = nums[mod_s..mod_e]
+
+    if mod_nums.length > 0
       sn_index = fn_index + 1
-      modified_nums.each do |sn|
+
+      mod_nums.each do |sn|
         if fn + sn == target
           return [fn_index, sn_index]
         else
@@ -20,6 +43,7 @@ def two_sum(nums, target)
         end
       end
     end
+
     fn_index += 1
   end
 end
@@ -32,3 +56,6 @@ p two_sum([3, 2, 4], 6)
 
 p two_sum([3, 3], 6)
 # Expecting [0, 1]
+
+p two_sum([1, 3, 5, 7, 8], 13)
+# Expecting [2, 4]
