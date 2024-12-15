@@ -8,14 +8,14 @@ require 'pry'
 
 def two_sum(nums, target)
   first_num_index = 0
-  nums.each do |fn|
+  nums.each do |first_num|
     mod_start = first_num_index + 1
     mod_end = nums.length
     mod_nums = nums[mod_start..mod_end]
     if mod_nums.length > 0
       second_num_index = first_num_index + 1
-      mod_nums.each do |sn|
-        if fn + sn == target
+      mod_nums.each do |second_num|
+        if first_num + second_num == target
           return [first_num_index, second_num_index]
         else
           second_num_index += 1
