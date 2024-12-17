@@ -8,7 +8,6 @@ require 'pry'
 # Output: Integer
 
 def roman_to_int(string)
-  # Find special cases in the main string
   string.gsub!('IV','/4/')
   string.gsub!('IX','/9/')
   string.gsub!('XL','/40/')
@@ -16,7 +15,6 @@ def roman_to_int(string)
   string.gsub!('CD','/400/')
   string.gsub!('CM','/900/')
 
-  # Find normal cases in the main string
   string.gsub!('I','/1/')
   string.gsub!('V','/5/')
   string.gsub!('X','/10/')
@@ -25,12 +23,10 @@ def roman_to_int(string)
   string.gsub!('D','/500/')
   string.gsub!('M','/1000/')
 
-  # Remove the formatting and separate the strings into a new array
   string.gsub!('//','+')
   string.gsub!('/','')
   all_numbers = string.split('+')
 
-  # Change all strings to integers and sum them together
   all_numbers.map do |number|
     number.to_i
   end.sum

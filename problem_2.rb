@@ -10,6 +10,7 @@ require 'pry'
 def is_palindrome(integer)
   string = integer.to_s
   length = string.length
+  
   if length == 0 || length == 1
     return true
   elsif string[0] == string[string.length - 1]
