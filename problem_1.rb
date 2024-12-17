@@ -6,6 +6,9 @@ require 'pry'
 # You may assume that each input would have exactly one solution, and you may not use the same element twice.
 # You can return the answer in any order.
 
+# Input: Array of Integers, Integer
+# Output: Array of Integers
+
 def two_sum(nums, target)
   first_num_index = 0
   nums.each do |first_num|
