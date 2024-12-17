@@ -9,9 +9,6 @@ require 'pry'
 
 def method(input)
   binding.pry
-
-  # Set variables
-  # Return
 end
 
 p method('input')
