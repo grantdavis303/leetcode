@@ -1,5 +1,11 @@
 require 'pry'
 
+# 1. Read the problem or prompt thoroughly
+# 2. Define input and expected output
+# 3. Determine constraints and create tests (with expected outcomes)
+# 4. Brainstorm ideas
+# 5. Build the method/function
+
 # Problem #
 
 # Description
